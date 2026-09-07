@@ -1,0 +1,2767 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Investigación Gamer</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #0f172a;
+
+            color: #f8fafc;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7c3aed,
+                    #2563eb
+                );
+
+            padding: 55px 20px;
+
+            text-align: center;
+
+        }
+
+
+        header h1 {
+
+            font-size: 42px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        header p {
+
+            font-size: 18px;
+
+            color: #e0e7ff;
+
+        }
+
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        nav {
+
+            background: #020617;
+
+            padding: 15px;
+
+            text-align: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 15px;
+
+            font-weight: bold;
+
+        }
+
+
+        nav a:hover {
+
+            color: #a78bfa;
+
+        }
+
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        main {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 30px 20px;
+
+        }
+
+
+        section {
+
+            background: #1e293b;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,.25);
+
+        }
+
+
+        h2 {
+
+            color: #a78bfa;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        h3 {
+
+            color: #60a5fa;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        /* =========================
+           INTRODUCCIÓN
+        ========================= */
+
+        .introduccion {
+
+            text-align: justify;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =========================
+           ENCUESTA
+        ========================= */
+
+        .pregunta {
+
+            background: #0f172a;
+
+            padding: 20px;
+
+            margin-top: 20px;
+
+            border-radius: 12px;
+
+            border: 1px solid #334155;
+
+        }
+
+
+        .pregunta label {
+
+            display: block;
+
+            padding: 10px;
+
+            margin-top: 5px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+        }
+
+
+        .pregunta label:hover {
+
+            background: #1e293b;
+
+        }
+
+
+        input[type="text"] {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            margin: 10px 0 15px;
+
+            font-size: 16px;
+
+        }
+
+
+        input[type="password"] {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            margin: 15px 0;
+
+            font-size: 16px;
+
+        }
+
+
+        input[type="radio"] {
+
+            margin-right: 8px;
+
+        }
+
+
+        /* =========================
+           BOTONES
+        ========================= */
+
+        button {
+
+            border: none;
+
+            padding: 13px 20px;
+
+            border-radius: 9px;
+
+            color: white;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            margin-top: 15px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7c3aed,
+                    #2563eb
+                );
+
+        }
+
+
+        button:hover {
+
+            opacity: .85;
+
+        }
+
+
+        .boton-eliminar {
+
+            background: #dc2626;
+
+            padding: 8px 12px;
+
+            margin: 0;
+
+        }
+
+
+        .boton-borrar-todo {
+
+            background: #991b1b;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .boton-admin {
+
+            background: #475569;
+
+        }
+
+
+        .boton-cerrar {
+
+            background: #dc2626;
+
+            float: right;
+
+        }
+
+
+        /* =========================
+           ESTADÍSTICAS
+        ========================= */
+
+        .estadisticas {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(200px, 1fr)
+                );
+
+            gap: 20px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .estadistica {
+
+            background: #0f172a;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border: 1px solid #334155;
+
+        }
+
+
+        .numero {
+
+            display: block;
+
+            font-size: 36px;
+
+            font-weight: bold;
+
+            color: #a78bfa;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =========================
+           RESULTADO
+        ========================= */
+
+        .resultado {
+
+            background: #0f172a;
+
+            padding: 25px;
+
+            border-left: 5px solid #8b5cf6;
+
+            border-radius: 10px;
+
+        }
+
+
+        /* =========================
+           BARRAS
+        ========================= */
+
+        .barra-contenedor {
+
+            margin: 18px 0;
+
+        }
+
+
+        .barra-titulo {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 6px;
+
+        }
+
+
+        .barra {
+
+            width: 100%;
+
+            height: 25px;
+
+            background: #020617;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+        }
+
+
+        .barra-progreso {
+
+            height: 100%;
+
+            width: 0%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #7c3aed,
+                    #3b82f6
+                );
+
+            transition: width .5s;
+
+        }
+
+
+        /* =========================
+           TABLA
+        ========================= */
+
+        .tabla-container {
+
+            overflow-x: auto;
+
+        }
+
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 15px;
+
+        }
+
+
+        th,
+        td {
+
+            padding: 13px;
+
+            text-align: center;
+
+            border-bottom:
+                1px solid #334155;
+
+        }
+
+
+        th {
+
+            background: #020617;
+
+            color: #a78bfa;
+
+        }
+
+
+        tr:hover {
+
+            background: #263449;
+
+        }
+
+
+        /* =========================
+           LOGIN ADMIN
+        ========================= */
+
+        #loginAdministrador {
+
+            max-width: 500px;
+
+            margin: 50px auto;
+
+            text-align: center;
+
+        }
+
+
+        .candado {
+
+            font-size: 60px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .error-login {
+
+            color: #f87171;
+
+            font-weight: bold;
+
+            margin-top: 10px;
+
+        }
+
+
+        .exito {
+
+            color: #4ade80;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================
+           PANEL ADMINISTRADOR
+        ========================= */
+
+        #panelAdministrador {
+
+            display: none;
+
+        }
+
+
+        .admin-header {
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            background: #020617;
+
+            padding: 30px;
+
+            color: #94a3b8;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 600px) {
+
+            header h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            nav a {
+
+                display: block;
+
+                margin: 8px;
+
+            }
+
+
+            section {
+
+                padding: 20px;
+
+            }
+
+
+            .boton-cerrar {
+
+                float: none;
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <h1>🎮 Investigación Gamer</h1>
+
+    <p>
+        Personalidad y preferencias de géneros de videojuegos
+    </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     NAVEGACIÓN
+===================================================== -->
+
+<nav>
+
+    <a href="#introduccion">
+        Introducción
+    </a>
+
+    <a href="#encuesta">
+        Encuesta
+    </a>
+
+    <a href="#loginAdministrador">
+        🔐 Administrador
+    </a>
+
+</nav>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     INTRODUCCIÓN
+===================================================== -->
+
+<section id="introduccion">
+
+    <h2>📖 Introducción</h2>
+
+    <p class="introduccion">
+
+        Los videojuegos se han convertido en una de las principales
+        formas de entretenimiento digital. Actualmente existen
+        diferentes géneros de videojuegos, cada uno diseñado para
+        ofrecer experiencias diferentes al jugador.
+
+        <br><br>
+
+        Esta investigación busca analizar la relación entre ciertos
+        gustos y características de personalidad de los jugadores
+        y los géneros de videojuegos que podrían resultar más
+        atractivos para ellos.
+
+        <br><br>
+
+        Para realizar el estudio se utilizará una encuesta de
+        personalidad. Los participantes deberán responder una serie
+        de preguntas relacionadas con sus gustos, comportamientos
+        y preferencias.
+
+        <br><br>
+
+        A partir de sus respuestas, el sistema calculará un perfil
+        gamer. Los resultados serán registrados para posteriormente
+        realizar un análisis general de todos los participantes.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     ENCUESTA
+===================================================== -->
+
+<section id="encuesta">
+
+    <h2>🧠 Test de personalidad gamer</h2>
+
+    <p>
+
+        Responde cada pregunta utilizando una escala del 1 al 5.
+
+        <br>
+
+        <strong>
+            1 = Nada
+            &nbsp; | &nbsp;
+            2 = Poco
+            &nbsp; | &nbsp;
+            3 = Regular
+            &nbsp; | &nbsp;
+            4 = Bastante
+            &nbsp; | &nbsp;
+            5 = Mucho
+        </strong>
+
+    </p>
+
+
+    <label>
+
+        <strong>
+            Nombre o iniciales (opcional)
+        </strong>
+
+    </label>
+
+
+    <input
+        type="text"
+        id="nombre"
+        placeholder="Ejemplo: Juan / J.P. / Anónimo"
+    >
+
+
+
+    <!-- PREGUNTA 1 -->
+
+    <div class="pregunta">
+
+        <h3>
+            1. ¿Acostumbras disfrutar de entornos
+            oscuros, misteriosos o de terror?
+        </h3>
+
+        <label>
+            <input type="radio" name="p1" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p1" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p1" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p1" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p1" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 2 -->
+
+    <div class="pregunta">
+
+        <h3>
+            2. ¿Te gusta resolver acertijos,
+            enigmas o problemas complicados?
+        </h3>
+
+        <label>
+            <input type="radio" name="p2" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p2" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p2" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p2" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p2" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 3 -->
+
+    <div class="pregunta">
+
+        <h3>
+            3. ¿Prefieres reaccionar rápidamente ante
+            una situación en lugar de analizarla
+            durante mucho tiempo?
+        </h3>
+
+        <label>
+            <input type="radio" name="p3" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p3" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p3" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p3" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p3" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 4 -->
+
+    <div class="pregunta">
+
+        <h3>
+            4. ¿Te gusta explorar lugares nuevos aunque
+            no sepas qué encontrarás?
+        </h3>
+
+        <label>
+            <input type="radio" name="p4" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p4" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p4" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p4" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p4" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 5 -->
+
+    <div class="pregunta">
+
+        <h3>
+            5. ¿Te gusta competir contra otras personas
+            y demostrar tus habilidades?
+        </h3>
+
+        <label>
+            <input type="radio" name="p5" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p5" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p5" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p5" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p5" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 6 -->
+
+    <div class="pregunta">
+
+        <h3>
+            6. ¿Disfrutas planificar tus acciones antes
+            de ejecutarlas?
+        </h3>
+
+        <label>
+            <input type="radio" name="p6" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p6" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p6" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p6" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p6" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 7 -->
+
+    <div class="pregunta">
+
+        <h3>
+            7. ¿Te interesa desarrollar y mejorar un
+            personaje durante muchas horas?
+        </h3>
+
+        <label>
+            <input type="radio" name="p7" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p7" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p7" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p7" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p7" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 8 -->
+
+    <div class="pregunta">
+
+        <h3>
+            8. ¿Te gusta disfrutar historias con personajes,
+            diálogos y decisiones importantes?
+        </h3>
+
+        <label>
+            <input type="radio" name="p8" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p8" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p8" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p8" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p8" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 9 -->
+
+    <div class="pregunta">
+
+        <h3>
+            9. ¿Disfrutas administrar recursos,
+            construir cosas o gestionar sistemas?
+        </h3>
+
+        <label>
+            <input type="radio" name="p9" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p9" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p9" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p9" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p9" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <!-- PREGUNTA 10 -->
+
+    <div class="pregunta">
+
+        <h3>
+            10. ¿Te gusta experimentar adrenalina,
+            velocidad y situaciones de riesgo?
+        </h3>
+
+        <label>
+            <input type="radio" name="p10" value="1">
+            1 - Nada
+        </label>
+
+        <label>
+            <input type="radio" name="p10" value="2">
+            2 - Poco
+        </label>
+
+        <label>
+            <input type="radio" name="p10" value="3">
+            3 - Regular
+        </label>
+
+        <label>
+            <input type="radio" name="p10" value="4">
+            4 - Bastante
+        </label>
+
+        <label>
+            <input type="radio" name="p10" value="5">
+            5 - Mucho
+        </label>
+
+    </div>
+
+
+
+    <button onclick="registrarRespuesta()">
+
+        📋 Registrar respuesta
+
+    </button>
+
+
+    <p id="mensaje"></p>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     RESULTADO PERSONAL
+===================================================== -->
+
+<section id="resultadoPersonalidad"
+         style="display:none;">
+
+    <h2>🎮 Tu resultado</h2>
+
+    <div class="resultado">
+
+        <h2 id="resultadoGenero"></h2>
+
+        <p id="resultadoDescripcion"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOGIN ADMINISTRADOR
+===================================================== -->
+
+<section id="loginAdministrador">
+
+    <div class="candado">
+        🔐
+    </div>
+
+    <h2>
+        Acceso de administrador
+    </h2>
+
+    <p>
+        Los resultados de la investigación
+        están protegidos.
+    </p>
+
+
+    <input
+        type="password"
+        id="passwordAdministrador"
+        placeholder="Contraseña de administrador"
+    >
+
+
+    <button
+        onclick="iniciarSesion()">
+
+        🔓 Ingresar
+
+    </button>
+
+
+    <p
+        id="errorLogin"
+        class="error-login">
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PANEL ADMINISTRADOR
+===================================================== -->
+
+<section
+    id="panelAdministrador">
+
+
+    <div class="admin-header">
+
+        <button
+            class="boton-cerrar"
+            onclick="cerrarSesion()">
+
+            🔒 Cerrar sesión
+
+        </button>
+
+
+        <h2>
+            🛡️ Panel de administrador
+        </h2>
+
+
+        <p>
+            Desde este panel puedes consultar,
+            analizar y eliminar las respuestas
+            de la investigación.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         ESTADÍSTICAS
+    ========================= -->
+
+    <h2>
+        📊 Resultados generales
+    </h2>
+
+
+    <div class="estadisticas">
+
+
+        <div class="estadistica">
+
+            <span
+                class="numero"
+                id="totalRespuestas">
+
+                0
+
+            </span>
+
+            Participantes
+
+        </div>
+
+
+
+        <div class="estadistica">
+
+            <span
+                class="numero"
+                id="generoGanador">
+
+                -
+
+            </span>
+
+            Perfil predominante
+
+        </div>
+
+
+
+        <div class="estadistica">
+
+            <span
+                class="numero"
+                id="porcentajeGanador">
+
+                0%
+
+            </span>
+
+            Porcentaje
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         GRÁFICA
+    ========================= -->
+
+    <h2 style="margin-top:30px;">
+
+        📈 Preferencias de los participantes
+
+    </h2>
+
+
+    <p>
+
+        Estos datos se actualizan automáticamente
+        al registrar o eliminar respuestas.
+
+    </p>
+
+
+    <div
+        id="barrasResultados">
+
+    </div>
+
+
+
+    <!-- =========================
+         RESPUESTAS
+    ========================= -->
+
+    <h2 style="margin-top:30px;">
+
+        📋 Respuestas registradas
+
+    </h2>
+
+
+    <button
+        class="boton-borrar-todo"
+        onclick="borrarTodasLasRespuestas()">
+
+        🗑️ Borrar todas las respuestas
+
+    </button>
+
+
+    <div class="tabla-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+
+                    <th>Participante</th>
+
+                    <th>Perfil</th>
+
+                    <th>Fecha</th>
+
+                    <th>Acción</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody
+                id="tablaRespuestas">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- =========================
+         ANÁLISIS
+    ========================= -->
+
+    <h2 style="margin-top:30px;">
+
+        🔎 Análisis
+
+    </h2>
+
+
+    <div
+        class="resultado"
+        id="textoAnalisis">
+
+        Aún no existen respuestas.
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        🎮 Proyecto de investigación sobre videojuegos
+    </p>
+
+    <p>
+        Encuesta de personalidad gamer
+    </p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================================
+   CONTRASEÑA DEL ADMINISTRADOR
+===================================================== */
+
+const CONTRASENA_ADMIN =
+    "Fontana123";
+
+
+
+/* =====================================================
+   GÉNEROS
+===================================================== */
+
+const nombresGeneros = [
+
+    "Acción",
+
+    "Terror",
+
+    "Puzzle",
+
+    "Aventura",
+
+    "Deportes",
+
+    "Estrategia",
+
+    "RPG",
+
+    "Simulación",
+
+    "Carreras"
+
+];
+
+
+
+/* =====================================================
+   RESPUESTAS GUARDADAS
+===================================================== */
+
+let respuestas =
+
+    JSON.parse(
+
+        localStorage.getItem(
+            "investigacionGamer"
+        )
+
+    ) || [];
+
+
+
+/* =====================================================
+   DESCRIPCIONES
+===================================================== */
+
+const descripciones = {
+
+
+    "Acción":
+
+    "Tu perfil muestra una inclinación hacia experiencias rápidas, dinámicas y llenas de desafíos. Probablemente disfrutas actuar bajo presión y mantenerte constantemente activo.",
+
+
+    "Terror":
+
+    "Pareces sentir curiosidad por lo desconocido y disfrutar experiencias de suspenso, tensión y adrenalina.",
+
+
+    "Puzzle":
+
+    "Tu perfil demuestra interés por resolver problemas, analizar situaciones y encontrar soluciones mediante el razonamiento.",
+
+
+    "Aventura":
+
+    "Tu personalidad parece estar relacionada con la exploración, el descubrimiento y la curiosidad por conocer nuevos lugares e historias.",
+
+
+    "Deportes":
+
+    "Tu perfil muestra una tendencia competitiva y un interés por demostrar habilidades frente a otros participantes.",
+
+
+    "Estrategia":
+
+    "Tu personalidad presenta una inclinación hacia la planificación, organización y toma de decisiones.",
+
+
+    "RPG":
+
+    "Pareces disfrutar experiencias prolongadas, desarrollo de personajes, progresión e historias en las que puedes tomar decisiones.",
+
+
+    "Simulación":
+
+    "Tu perfil muestra interés por construir, administrar recursos y experimentar con diferentes sistemas.",
+
+
+    "Carreras":
+
+    "Tu personalidad parece disfrutar la velocidad, la competencia, la adrenalina y la superación de objetivos."
+
+};
+
+
+
+/* =====================================================
+   CALCULAR PERFIL
+===================================================== */
+
+function calcularPerfil(valores) {
+
+
+    const puntuaciones = {
+
+
+        "Acción":
+
+            valores[2] +
+            valores[9],
+
+
+        "Terror":
+
+            valores[0],
+
+
+        "Puzzle":
+
+            valores[1],
+
+
+        "Aventura":
+
+            valores[3] +
+            valores[7],
+
+
+        "Deportes":
+
+            valores[4],
+
+
+        "Estrategia":
+
+            valores[5] +
+            valores[8],
+
+
+        "RPG":
+
+            valores[6] +
+            valores[7],
+
+
+        "Simulación":
+
+            valores[8],
+
+
+        "Carreras":
+
+            valores[9]
+
+    };
+
+
+    let ganador = "";
+
+    let mayor = -1;
+
+
+    for (
+        const genero in puntuaciones
+    ) {
+
+
+        if (
+            puntuaciones[genero]
+            > mayor
+        ) {
+
+
+            mayor =
+                puntuaciones[genero];
+
+
+            ganador =
+                genero;
+
+        }
+
+    }
+
+
+    return {
+
+        genero: ganador,
+
+        puntuacion: mayor
+
+    };
+
+}
+
+
+
+/* =====================================================
+   REGISTRAR RESPUESTA
+===================================================== */
+
+function registrarRespuesta() {
+
+
+    const valores = [];
+
+
+    /*
+
+       Comprobar que las 10 preguntas
+       estén respondidas.
+
+    */
+
+
+    for (
+        let i = 1;
+        i <= 10;
+        i++
+    ) {
+
+
+        const respuesta =
+
+            document.querySelector(
+
+                `input[name="p${i}"]:checked`
+
+            );
+
+
+        if (!respuesta) {
+
+
+            mostrarMensaje(
+
+                `⚠️ Debes responder la pregunta ${i}.`,
+
+                false
+
+            );
+
+
+            return;
+
+        }
+
+
+        valores.push(
+
+            Number(
+                respuesta.value
+            )
+
+        );
+
+    }
+
+
+
+    /* =========================
+       NOMBRE
+    ========================= */
+
+    const nombreInput =
+
+        document.getElementById(
+            "nombre"
+        );
+
+
+    const nombre =
+
+        nombreInput.value.trim()
+        || "Anónimo";
+
+
+
+    /* =========================
+       PERFIL
+    ========================= */
+
+    const perfil =
+
+        calcularPerfil(
+            valores
+        );
+
+
+
+    /* =========================
+       CREAR RESPUESTA
+    ========================= */
+
+    const nuevaRespuesta = {
+
+
+        id:
+
+            Date.now(),
+
+
+        nombre:
+
+            nombre,
+
+
+        respuestas:
+
+            valores,
+
+
+        genero:
+
+            perfil.genero,
+
+
+        puntuacion:
+
+            perfil.puntuacion,
+
+
+        fecha:
+
+            new Date().toLocaleString(
+                "es-CO"
+            )
+
+    };
+
+
+
+    /* =========================
+       GUARDAR
+    ========================= */
+
+    respuestas.push(
+        nuevaRespuesta
+    );
+
+
+    guardarDatos();
+
+
+
+    /* =========================
+       MOSTRAR RESULTADO
+    ========================= */
+
+    document.getElementById(
+
+        "resultadoPersonalidad"
+
+    ).style.display =
+
+        "block";
+
+
+    document.getElementById(
+
+        "resultadoGenero"
+
+    ).textContent =
+
+        "🎮 " +
+        perfil.genero;
+
+
+    document.getElementById(
+
+        "resultadoDescripcion"
+
+    ).textContent =
+
+        descripciones[
+            perfil.genero
+        ];
+
+
+
+    mostrarMensaje(
+
+        "✅ Respuesta registrada correctamente.",
+
+        true
+
+    );
+
+
+
+    /* =========================
+       LIMPIAR
+    ========================= */
+
+    document.getElementById(
+        "nombre"
+    ).value = "";
+
+
+    for (
+        let i = 1;
+        i <= 10;
+        i++
+    ) {
+
+
+        document
+            .querySelectorAll(
+                `input[name="p${i}"]`
+            )
+            .forEach(
+                radio =>
+                    radio.checked = false
+            );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   GUARDAR
+===================================================== */
+
+function guardarDatos() {
+
+
+    localStorage.setItem(
+
+        "investigacionGamer",
+
+        JSON.stringify(
+            respuestas
+        )
+
+    );
+
+}
+
+
+
+/* =====================================================
+   MENSAJE
+===================================================== */
+
+function mostrarMensaje(
+    texto,
+    correcto
+) {
+
+
+    const mensaje =
+
+        document.getElementById(
+            "mensaje"
+        );
+
+
+    mensaje.textContent =
+        texto;
+
+
+    mensaje.className =
+
+        correcto
+        ? "mensaje exito"
+        : "mensaje error";
+
+}
+
+
+
+/* =====================================================
+   LOGIN ADMINISTRADOR
+===================================================== */
+
+function iniciarSesion() {
+
+
+    const contraseña =
+
+        document.getElementById(
+
+            "passwordAdministrador"
+
+        ).value;
+
+
+
+    if (
+        contraseña ===
+        CONTRASENA_ADMIN
+    ) {
+
+
+        /*
+
+           Ocultar login
+
+        */
+
+        document.getElementById(
+
+            "loginAdministrador"
+
+        ).style.display =
+
+            "none";
+
+
+
+        /*
+
+           Mostrar panel
+
+        */
+
+        document.getElementById(
+
+            "panelAdministrador"
+
+        ).style.display =
+
+            "block";
+
+
+
+        /*
+
+           Limpiar contraseña
+
+        */
+
+        document.getElementById(
+
+            "passwordAdministrador"
+
+        ).value = "";
+
+
+
+        document.getElementById(
+
+            "errorLogin"
+
+        ).textContent = "";
+
+
+
+        actualizarPanelAdministrador();
+
+
+    }
+
+    else {
+
+
+        document.getElementById(
+
+            "errorLogin"
+
+        ).textContent =
+
+            "❌ Contraseña incorrecta.";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   CERRAR SESIÓN
+===================================================== */
+
+function cerrarSesion() {
+
+
+    document.getElementById(
+
+        "panelAdministrador"
+
+    ).style.display =
+
+        "none";
+
+
+    document.getElementById(
+
+        "loginAdministrador"
+
+    ).style.display =
+
+        "block";
+
+
+    document.getElementById(
+
+        "passwordAdministrador"
+
+    ).value = "";
+
+
+    document.getElementById(
+
+        "errorLogin"
+
+    ).textContent = "";
+
+}
+
+
+
+/* =====================================================
+   ACTUALIZAR PANEL
+===================================================== */
+
+function actualizarPanelAdministrador() {
+
+
+    actualizarEstadisticas();
+
+
+    actualizarBarras();
+
+
+    actualizarTabla();
+
+
+    actualizarAnalisis();
+
+}
+
+
+
+/* =====================================================
+   CONTAR GÉNEROS
+===================================================== */
+
+function contarGeneros() {
+
+
+    const conteo = {};
+
+
+    nombresGeneros.forEach(
+
+        genero =>
+
+            conteo[genero] = 0
+
+    );
+
+
+    respuestas.forEach(
+
+        respuesta => {
+
+
+            if (
+
+                conteo[
+                    respuesta.genero
+                ] !== undefined
+
+            ) {
+
+
+                conteo[
+                    respuesta.genero
+                ]++;
+
+            }
+
+        }
+
+    );
+
+
+    return conteo;
+
+}
+
+
+
+/* =====================================================
+   ESTADÍSTICAS
+===================================================== */
+
+function actualizarEstadisticas() {
+
+
+    const total =
+        respuestas.length;
+
+
+    document.getElementById(
+
+        "totalRespuestas"
+
+    ).textContent =
+
+        total;
+
+
+
+    if (total === 0) {
+
+
+        document.getElementById(
+
+            "generoGanador"
+
+        ).textContent = "-";
+
+
+        document.getElementById(
+
+            "porcentajeGanador"
+
+        ).textContent = "0%";
+
+
+        return;
+
+    }
+
+
+
+    const conteo =
+        contarGeneros();
+
+
+    let ganador = "";
+
+    let mayor = 0;
+
+
+
+    for (
+        const genero in conteo
+    ) {
+
+
+        if (
+            conteo[genero]
+            > mayor
+        ) {
+
+
+            mayor =
+                conteo[genero];
+
+
+            ganador =
+                genero;
+
+        }
+
+    }
+
+
+
+    const porcentaje =
+
+        Math.round(
+
+            (
+                mayor
+                / total
+            ) * 100
+
+        );
+
+
+
+    document.getElementById(
+
+        "generoGanador"
+
+    ).textContent =
+
+        ganador;
+
+
+    document.getElementById(
+
+        "porcentajeGanador"
+
+    ).textContent =
+
+        porcentaje + "%";
+
+}
+
+
+
+/* =====================================================
+   BARRAS
+===================================================== */
+
+function actualizarBarras() {
+
+
+    const contenedor =
+
+        document.getElementById(
+
+            "barrasResultados"
+
+        );
+
+
+    contenedor.innerHTML = "";
+
+
+    const conteo =
+        contarGeneros();
+
+
+    const total =
+        respuestas.length;
+
+
+
+    nombresGeneros.forEach(
+
+        genero => {
+
+
+            const cantidad =
+                conteo[genero];
+
+
+            let porcentaje = 0;
+
+
+            if (total > 0) {
+
+
+                porcentaje =
+
+                    Math.round(
+
+                        (
+                            cantidad
+                            / total
+                        ) * 100
+
+                    );
+
+            }
+
+
+
+            const elemento =
+
+                document.createElement(
+                    "div"
+                );
+
+
+            elemento.className =
+
+                "barra-contenedor";
+
+
+            elemento.innerHTML = `
+
+                <div class="barra-titulo">
+
+                    <span>
+                        ${genero}
+                    </span>
+
+                    <span>
+                        ${cantidad}
+                        votos
+                        (${porcentaje}%)
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="barra-progreso"
+                        style="width:${porcentaje}%">
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            contenedor.appendChild(
+                elemento
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================================
+   TABLA
+===================================================== */
+
+function actualizarTabla() {
+
+
+    const tabla =
+
+        document.getElementById(
+
+            "tablaRespuestas"
+
+        );
+
+
+    tabla.innerHTML = "";
+
+
+
+    if (
+        respuestas.length === 0
+    ) {
+
+
+        tabla.innerHTML = `
+
+            <tr>
+
+                <td colspan="5">
+
+                    No existen respuestas
+                    registradas.
+
+                </td>
+
+            </tr>
+
+        `;
+
+
+        return;
+
+    }
+
+
+
+    respuestas.forEach(
+
+        (respuesta, index) => {
+
+
+            const fila =
+
+                document.createElement(
+                    "tr"
+                );
+
+
+            fila.innerHTML = `
+
+                <td>
+                    ${index + 1}
+                </td>
+
+                <td>
+                    ${escapeHTML(
+                        respuesta.nombre
+                    )}
+                </td>
+
+                <td>
+                    🎮 ${respuesta.genero}
+                </td>
+
+                <td>
+                    ${respuesta.fecha}
+                </td>
+
+                <td>
+
+                    <button
+                        class="boton-eliminar"
+                        onclick="
+                            eliminarRespuesta(
+                                ${respuesta.id}
+                            )
+                        ">
+
+                        🗑️ Eliminar
+
+                    </button>
+
+                </td>
+
+            `;
+
+
+            tabla.appendChild(
+                fila
+            );
+
+        }
+
+    );
+
+}
+
+
+
+/* =====================================================
+   ELIMINAR UNA RESPUESTA
+===================================================== */
+
+function eliminarRespuesta(id) {
+
+
+    const confirmar =
+
+        confirm(
+
+            "¿Seguro que deseas eliminar esta respuesta?"
+
+        );
+
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+
+
+    respuestas =
+
+        respuestas.filter(
+
+            respuesta =>
+
+                respuesta.id !== id
+
+        );
+
+
+
+    guardarDatos();
+
+
+    actualizarPanelAdministrador();
+
+
+    alert(
+        "Respuesta eliminada correctamente."
+    );
+
+}
+
+
+
+/* =====================================================
+   BORRAR TODO
+===================================================== */
+
+function borrarTodasLasRespuestas() {
+
+
+    if (
+        respuestas.length === 0
+    ) {
+
+
+        alert(
+            "No existen respuestas."
+        );
+
+
+        return;
+
+    }
+
+
+
+    const confirmar =
+
+        confirm(
+
+            "¿Seguro que deseas eliminar TODAS las respuestas?"
+
+        );
+
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+
+
+    respuestas = [];
+
+
+    guardarDatos();
+
+
+    actualizarPanelAdministrador();
+
+
+    alert(
+        "Todas las respuestas fueron eliminadas."
+    );
+
+}
+
+
+
+/* =====================================================
+   ANÁLISIS
+===================================================== */
+
+function actualizarAnalisis() {
+
+
+    const contenedor =
+
+        document.getElementById(
+
+            "textoAnalisis"
+
+        );
+
+
+    const total =
+        respuestas.length;
+
+
+
+    if (total === 0) {
+
+
+        contenedor.innerHTML = `
+
+            Aún no existen respuestas
+            registradas para realizar
+            el análisis.
+
+        `;
+
+
+        return;
+
+    }
+
+
+
+    const conteo =
+        contarGeneros();
+
+
+    let ganador = "";
+
+    let mayor = 0;
+
+
+
+    for (
+        const genero in conteo
+    ) {
+
+
+        if (
+            conteo[genero]
+            > mayor
+        ) {
+
+
+            mayor =
+                conteo[genero];
+
+
+            ganador =
+                genero;
+
+        }
+
+    }
+
+
+
+    const porcentaje =
+
+        Math.round(
+
+            (
+                mayor
+                / total
+            ) * 100
+
+        );
+
+
+
+    contenedor.innerHTML = `
+
+        <p>
+
+            Actualmente la investigación
+            cuenta con
+
+            <strong>
+                ${total}
+                participantes
+            </strong>.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            El perfil gamer predominante
+            es
+
+            <strong>
+                ${ganador}
+            </strong>,
+
+            con
+
+            <strong>
+                ${mayor}
+                participantes
+            </strong>,
+
+            equivalente al
+
+            <strong>
+                ${porcentaje}%
+            </strong>
+
+            del total.
+
+        </p>
+
+        <br>
+
+        <p>
+
+            Esto indica que, dentro del grupo
+            encuestado, las características
+            relacionadas con el perfil
+
+            <strong>
+                ${ganador}
+            </strong>
+
+            presentan la mayor presencia.
+
+            Estos resultados pueden cambiar
+            a medida que se incorporen nuevos
+            participantes.
+
+        </p>
+
+    `;
+
+}
+
+
+
+/* =====================================================
+   PROTEGER NOMBRES
+===================================================== */
+
+function escapeHTML(text) {
+
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.textContent =
+        text;
+
+
+    return div.innerHTML;
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
